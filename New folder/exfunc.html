@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+<body>
+	<script>
+
+
+//constructor
+//create a constructor for an object House
+//give house the properties: yearBuilt, color, address , numberof Rooms
+//instantianting two House ; Chisipite n Glenlorne
+//give them propreties that you define
+//define function in your house object called information
+//information must display in a sentence
+//this.....
+function House(yearBuilt, numberofRooms, address, color){
+	this.yearBuilt= yearBuilt;
+	this.rooms= numberofRooms;
+	this.address = address;
+	this.color= color;
+	
+
+	this.information=function() {
+		document.write("This house is at" + this.address + " .It is" + this.color + " and has" + this.rooms + ".It was built" + this.yearBuilt + "<br>");
+	}
+}
+//instantianting ( constructing) a new student
+var house1= new House(" 2010"," 15","  Chisipite","  cream");
+var house2 = new House("  1999","  2","  Glenlorne","  white");
+
+house1.information();
+house2 .information()
+
+
+
+	</script>
+
+
+</body>
+
+</html>

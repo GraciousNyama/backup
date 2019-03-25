@@ -1,0 +1,122 @@
+<html>
+	<head>
+		<style>
+			*{color:purple; font-style:italic; font-size:20;}
+		</style>
+	</head>
+	<body>
+		<script>
+//add an array to your object called interesting and define 2 or more interest fo each person
+//define an object classRooms which has properties name, and students
+//create a ClassRoom instate called "Microworkspace"
+//and place your four persons in the Microworksapce object under an array students
+//create a function averageAge and calculate the average age of yo class
+//in classRoom create function median
+//calculate the median of the classRoom
+// create a toString function
+//list the name of everyone in the class
+//code for median odd (n+1)/2
+//sort . sort()
+//even or odd%modulus
+//if(array.length==2){
+	//even
+//}else{//odd
+	//(7+1)/2=
+//	var postion =(array.length +1)/2
+//var median = position -1
+//var median= array position[postion]
+//}
+//list name of students names in the class
+// this.toString(){
+	//text= "this is the microworkspace class. the clas list is <br><ul>
+	//for (i=0; 1<students.length;1++){
+		//text += "<li>"+
+		//text += this. students[i].name;
+		//text += "</li>"+
+	 //}
+	 //text+="</ul>"
+	 //document.write(text)
+	//}
+		function Person(name,  surname, age,gender,interest){
+			this.name =  name;
+			this.surname=  surname;
+			this.age= age;
+			this.gender = gender;
+			this.interest= interest;
+	
+	
+		this.toString=function() {
+			document.write("  Hi my name is " + this.name + " of house" + this.surname+ "   i am " + this.age+ "   and i am a" + this.gender + "   and my interests are" + this.interest + "<br>"+ "<br>");
+		}
+	};
+
+
+	var person1 = new Person(" Gracious","   Nyamaz",     23,"   female",["  sleeping", " eating."]);
+	var person2 = new Person(" Tatenda","   Marshall",    23 ,  "male" , [" drinking", " gumbling."] );
+	var person3 =new Person("  Belinda","    Mapedza",   23,"   female" ,["  partying","  gossiping."]);
+	var person4 = new Person(" Yvonne", "  Mare",  24 ,"  female",["  praying","  reading."]);
+	var person5 = new Person(" Rumbie","   	Fushay",     25,"   female",["  baking", " eating."]);
+	var person6 =new Person("  Melody","    Chapfu",   24,"   female" ,["  coding","  gossiping."]);
+	var person7 = new Person(" Patricia","   Vinga",    26 ,  "male" , [" partying", " gumbling."] );
+
+
+
+
+
+	person1.toString();
+	person2.toString();
+	person3.toString();
+	person4.toString();
+	person5.toString();
+	person6.toString();
+	person7.toString();
+
+
+
+		function classRoom(name,students){
+			this.name=name;
+			this.students=students;
+
+		this.averageAge= function(){
+			var totalAge=0;
+
+		for(i=0;i<this.students.length;i++){ 
+			totalAge+=this.students[i].age;
+		}
+		var average= totalAge/students.length;
+		document.write("The average age of the class is  "+average);
+	}
+
+		this.toString= function(){
+			text = "<br/><br/>this is the microworkspace class. the class list is  <br> <ul>";
+	
+		for (i=0; i<students.length; i++){
+			text += "<li>";
+			text += this.students[i].name +this.students[i].surname;
+			text += "</li>";
+		}
+	 
+	 		text+="</ul>";
+	 		document.write(text);
+	 	}
+	 	
+
+	
+	};
+	
+		var class1 =new classRoom("Micro Work Space",[person1,person2,person3,person4,person5,person6,person7]);
+		var class2= new classRoom("Microworkspace2" ,[person1,person2,person3,person4,person5,person6,person7]);
+		
+		class1.averageAge();	
+		class2.toString();
+		
+
+		
+
+	</script>
+
+
+</body>
+
+</html>
+
